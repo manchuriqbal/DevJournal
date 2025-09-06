@@ -3,9 +3,12 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Models\Post;
+use App\Models\Comment;
+use App\Models\Profile;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
@@ -44,5 +47,21 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function profile()
+    {
+        return $this->morphOne(Profile::class, 'profileable');
+    }
+
+    public function posts()
+    {
+        return $this->morphMany(Post::class, 'postable');
+    }
+
+
+    public function comments()
+    {
+        return $this->morphMany(Comment::class, 'commenter');
     }
 }
