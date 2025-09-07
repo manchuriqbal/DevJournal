@@ -8,7 +8,7 @@ This project is an enhanced blogging platform called **DevJournal**, built with 
 ### Authentication & Role Management
 - **Guards for different user types:**
   - **Admin** – Full access to all features, including user management.
-  - **Creator** – Can manage posts and categories.
+  - **Author/Creator** – Can posts and manage categories.
   - **Reader/User** – Can browse and read posts.
 - **Middleware restrictions** ensure only authorized roles can access specific areas.
 
@@ -18,7 +18,7 @@ This project is an enhanced blogging platform called **DevJournal**, built with 
 
 ### Admin Dashboard
 - **Statistics overview:**
-  - Total posts, categories, users, and comments  
+  - Total posts, categories, users, likes and comments  
 - **Quick action buttons** for common tasks (e.g., add new post/category)  
 - **User management interface** for administrators  
 
@@ -38,7 +38,7 @@ This project is an enhanced blogging platform called **DevJournal**, built with 
 
 1. Clone the repository:  
    git clone https://github.com/manchuriqbal/DevJournal  
-   cd blog-template  
+   cd DevJournal  
 
 2. Install dependencies:  
    composer install  
